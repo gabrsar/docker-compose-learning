@@ -6,6 +6,15 @@ services:
       - "5000:5000"
     volumes:
       - .:/code
+    command: python app.py
+
+  yey:
+    build: .
+    ports:
+      - "5001:5000"
+    volumes:
+      - .:/code
+    command: python yey.py
   redis:
     image: "redis:alpine"
 
